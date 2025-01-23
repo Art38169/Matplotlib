@@ -36,15 +36,20 @@ import numpy as np
 # ax.grid(True)
 # plt.show()
 
-data_bars = np.loadtxt('values_for_bars.csv', delimiter=' ')
-# data_hist = np.loadtxt('values_for_hist.csv', delimiter=' ')
-unique_values, counts = np.unique(data_bars, return_counts=True)
+# data_bars = np.loadtxt('values_for_bars.csv', delimiter=' ')
+data_hist = np.loadtxt('values_for_hist.csv', delimiter=' ')
+# unique_values, counts = np.unique(data_bars, return_counts=True)
 
-plt.bar(unique_values, counts, color='orange', width=0.6)
+# plt.bar(unique_values, counts, color='orange', width=0.6)
 
-plt.title('Bar Chart of Unique Values')
-plt.xlabel('Unique Values')
+# plt.title('Bar Chart of Unique Values')
+# plt.xlabel('Unique Values')
+# plt.ylabel('Frequency')
+
+# plt.show()
+plt.figure(figsize = (6,4))
+plt.hist(data_hist, bins = 100, color = 'green')
+plt.title('Histogram of random values')
+plt.xlabel('Value')
 plt.ylabel('Frequency')
-
 plt.show()
-print(data_bars)
