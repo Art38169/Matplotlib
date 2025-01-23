@@ -26,10 +26,10 @@ ax = fig.add_subplot(111, projection = '3d')
 x_vals = np.linspace(-3, 3, 50)
 y_vals = np.linspace(-3, 3, 50)
 X, Y = np.meshgrid(x_vals, y_vals)
-Z = X ** 2 + Y ** 2
+Z = np.sin(3 * X) * Y
     
 ax.plot_surface(X, Y, Z, cmap = 'viridis', edgecolor = 'green')
-ax.set_title('Surface Plot: z = x^2 + y^2')
+ax.set_title('Surface Plot: z = y * sin(3x)')
 ax.set_xlabel('X')
 ax.set_ylabel('Y')
 ax.set_zlabel('Z')
